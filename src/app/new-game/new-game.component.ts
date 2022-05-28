@@ -1,4 +1,8 @@
 import {Component, OnInit} from '@angular/core';
+import {Submission} from "./submission";
+import {FormControl, NgForm} from "@angular/forms";
+import * as $ from "jquery";
+import {HttpClient} from "@angular/common/http";
 
 @Component({
   selector: 'app-new-game',
@@ -7,10 +11,18 @@ import {Component, OnInit} from '@angular/core';
 })
 export class NewGameComponent implements OnInit {
 
+  model: Submission = new Submission('', '', '', '', null, null, null)
+
+  submitted: boolean = false
+
   constructor() {
   }
 
   ngOnInit(): void {
+  }
+
+  onSubmit() {
+    $('#myform').submit()
   }
 
 }

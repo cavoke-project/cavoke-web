@@ -1,5 +1,7 @@
 <section style="padding-top: 2em; padding-bottom: 2em">
   <div class="container" style="margin-top: 5em">
+    <h2 class="mb-3">Available games</h2>
+    <p style="color: #888" *ngIf="(games | async) === null">Loading...</p>
     <div class="row">
       <div class="col">
         <div

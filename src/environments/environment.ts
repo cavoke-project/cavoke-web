@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiBasePath: "https://develop.api.cavoke.wlko.me"
+  apiBasePath: "http://localhost:8080"
 };
 
 /*
