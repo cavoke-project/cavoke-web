@@ -1,0 +1,18 @@
+<div *ngIf="gameStatistics | async as stats" class="section" style="padding-top: 2em; padding-bottom: 2em">
+  <div
+    *ngIf="gameInfo | async as game"
+    class="container"
+    style="margin-top: 6em"
+  >
+    <h2>{{game.display_name}}</h2>
+    <p style="background: #eee; border-radius: 5px; padding: 15px">
+      {{game.description}}
+    </p>
+    <p>Maximum number of players: {{game.players_num}}</p>
+    <h3>Game Statistics</h3>
+    <p>Total rounds played: {{stats.total_games_played}} rounds</p>
+    <p>Total time spent playing: {{stats.total_time_played_sec}} seconds</p>
+    <p>Average game duration: {{stats.average_duration_sec}} seconds</p>
+    <p>Average player count: {{stats.average_players_count}} players</p>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+<section style="padding-top: 2em; padding-bottom: 2em">
+  <div class="container" style="margin-top: 5em">
+    <div class="row">
+      <div class="col">
+        <div
+          *ngFor="let game of games | async"
+          class="card"
+          style="border-radius: 10px; margin-bottom: 10px"
+        >
+          <div class="card-body" style="border-radius: 0px">
+            <h4 class="card-title">
+              <a
+                class="text-body"
+                routerLink="/game/{{ game.id }}"
+                style="font-size: 24px"
+              >{{ game.display_name }}</a
+              >
+            </h4>
+            <p
+              class="card-text"
+            >
+              {{game.description}}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>

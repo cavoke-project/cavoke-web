@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  apiBasePath: "https://develop.api.cavoke.wlko.me" // TODO: replace with main
 };
