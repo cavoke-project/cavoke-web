@@ -23,27 +23,27 @@ import {environment} from "../environments/environment";
   ],
     imports: [
         BrowserModule,
-        AuthModule.forRoot({
-          domain: "cavoke.eu.auth0.com",
-          clientId: "3aoNB3XQLtBLDSwx7eftAed4YbyLXO69",
-          useRefreshTokens: true,
-          cacheLocation: "localstorage",
-          audience: "https://develop.api.cavoke.wlko.me",
-          httpInterceptor: {
-            allowedList: [`${environment.apiBasePath}/*`],
-          },
-        }),
+        // AuthModule.forRoot({
+        //   domain: "cavoke.eu.auth0.com",
+        //   clientId: "3aoNB3XQLtBLDSwx7eftAed4YbyLXO69",
+        //   useRefreshTokens: true,
+        //   cacheLocation: "localstorage",
+        //   audience: "https://develop.api.cavoke.wlko.me",
+        //   httpInterceptor: {
+        //     allowedList: [`${environment.apiBasePath}/*`],
+        //   },
+        // }),
         HttpClientModule,
         AppRoutingModule,
         ApiModule,
         FormsModule,
     ],
   providers: [
-    {
-      provide: HTTP_INTERCEPTORS,
-      useClass: AuthHttpInterceptor,
-      multi: true,
-    }
+    // {
+    //   provide: HTTP_INTERCEPTORS,
+    //   useClass: AuthHttpInterceptor,
+    //   multi: true,
+    // }
   ],
   bootstrap: [AppComponent]
 })

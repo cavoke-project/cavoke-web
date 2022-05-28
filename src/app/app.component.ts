@@ -9,10 +9,10 @@ import {AuthService} from "@auth0/auth0-angular";
 export class AppComponent {
   title = 'cavoke-web';
 
-  constructor(public auth: AuthService) {
+  constructor(/*public auth: AuthService*/) {
   }
 
-  logout() {
-    this.auth.logout({returnTo: window.location.origin})
-  }
+  // logout() {
+  //   this.auth.logout({returnTo: window.location.origin})
+  // }
 }
