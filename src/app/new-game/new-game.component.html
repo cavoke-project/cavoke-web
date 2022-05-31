@@ -2,7 +2,7 @@
   <div class="container">
     <div [hidden]="submitted">
       <h1>Submit New Cavoke Game</h1>
-      <form #heroForm="ngForm" id="myform" (ngSubmit)="onSubmit()" action="http://localhost:8080/submit_game" method="POST" enctype="multipart/form-data">
+      <form #heroForm="ngForm" id="myform" (ngSubmit)="onSubmit()" [action]="submitUrl" method="POST" enctype="multipart/form-data">
         <div class="form-group p-1">
           <label for="name">Display name</label>
           <input type="text" class="form-control" id="name"
